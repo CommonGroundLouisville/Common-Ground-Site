@@ -257,3 +257,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .phero{grid-template-columns:1fr}
   .quotes,.team,.locs,.cards.two{grid-template-columns:1fr}
 }
+
+/* podcast pricing */
+.member{margin-top:28px;border:1px solid var(--line);border-radius:24px;padding:30px;background:var(--white)}
+.mhead{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.mhead h3{font-family:var(--display);font-weight:800;font-size:1.9rem;text-transform:uppercase;line-height:1;color:var(--bark)}
+.save{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;background:var(--amber);color:var(--white);padding:5px 12px;border-radius:999px}
+.member .note{color:var(--muted);margin:10px 0 18px;font-size:.95rem}
+.tablewrap{overflow-x:auto}
+.rates{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:460px}
+.rates th,.rates td{padding:12px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+.rates thead th{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.rates th:first-child{text-align:left}
+.rates tbody th{font-weight:600;color:var(--ink)}
+.rates td{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--ink)}
+.rates tbody tr:last-child>*{border-bottom:0}
+.fine{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.fine>div{min-width:0}
+.fine h4{font-family:var(--display);font-weight:800;text-transform:uppercase;color:var(--bark);font-size:1.15rem;margin:0 0 10px}
+.fine p{color:var(--muted);font-size:.92rem;margin:0}
+.fine ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.92rem;color:var(--muted)}
+.fine li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.fine b{color:var(--ink);font-weight:600}
+@media (max-width:860px){.fine{grid-template-columns:1fr}.member{padding:22px}}

@@ -94,10 +94,10 @@
   var TIERS = {
     'side-hustle':  { name: 'Side Hustle', price: '$299', per: '/mo', inc: '8 coworking days a month', url: NEXUDUS },
     'daily-grind':  { name: 'Daily Grind', price: '$499', per: '/mo', inc: 'Unlimited 24/7, offices and meeting rooms included', url: NEXUDUS },
-    'teams':        { name: 'Strength in Numbers', price: 'Teams', per: '', inc: 'Shared access for your whole team', url: TOUR, cta: 'Talk to us' },
+    'teams':        { name: 'Strength in Numbers', price: 'Teams', per: '', inc: 'Shared access for your whole team', url: 'mailto:info@ourcommonground.co?subject=Team%20membership', cta: 'Talk to us' },
     'day-pass':     { name: 'Day pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: null, ask: 'cg' },
     'meeting-room': { name: 'Meeting room', price: '$150', per: '/hour', inc: 'For non-members, by availability', url: null, ask: 'cg' },
-    'event':        { name: 'Event inquiry', price: 'Ask', per: '', inc: 'Tell us your date and headcount', url: TOUR, cta: 'Ask us' },
+    'event':        { name: 'Event inquiry', price: 'Ask', per: '', inc: 'Tell us your date and headcount', url: 'mailto:info@ourcommonground.co?subject=Event%20inquiry', cta: 'Ask us' },
     'pod-standard': { name: 'Standard recording', price: '$249', per: '/hour', inc: 'Raw recording, no editing', url: BOOK },
     'pod-basic':    { name: 'Basic Editing', price: '$299', per: '/hour', inc: 'Recording plus a clean edit', url: BOOK },
     'pod-premium':  { name: 'Premium Editing', price: '$349', per: '/hour', inc: 'Edit plus a custom intro', url: BOOK }

@@ -109,6 +109,9 @@
     'event-space':     { lead: 'Host a workshop, launch or meetup with us.', tiers: ['event', 'daily-grind'] },
     'kitchen-lounge':  { lead: 'Coffee, kitchen and lounge seats for every member.', tiers: ['side-hustle', 'daily-grind', 'day-pass'] },
     'podcast-studio':  { lead: 'Record in the building with our crew.', label: 'Studio pricing', tiers: ['pod-standard', 'pod-basic', 'pod-premium'], more: ['podcast.html#pricing', 'See all studio pricing →'] },
+    'pod-record':      { label: 'Studio pricing', lead: 'Video and audio in a fully set studio.', tiers: ['pod-standard', 'pod-basic', 'pod-premium'], more: ['#pricing', 'See all studio pricing →'] },
+    'pod-film':        { label: 'Studio pricing', lead: 'Multiple camera angles, lit and ready.', tiers: ['pod-standard', 'pod-basic', 'pod-premium'], more: ['#pricing', 'See all studio pricing →'] },
+    'pod-edit':        { label: 'Studio pricing', lead: 'Full episodes or social clips, edited for you.', tiers: ['pod-basic', 'pod-premium'], more: ['#pricing', 'See all studio pricing →'] },
     'networking':      { lead: 'Members come free and can bring guests.', tiers: ['side-hustle', 'daily-grind'] },
     'workshops':       { lead: 'Trainings and talks with member pricing.', tiers: ['side-hustle', 'daily-grind'] },
     'lounge-days':     { lead: 'Drop in for the day or make it a habit.', tiers: ['day-pass', 'side-hustle', 'daily-grind'] }
@@ -135,7 +138,7 @@
         '<ul class="offer-tiers">' + rows + '</ul>' + (o.more ? '<a class="offer-more" href="' + o.more[0] + '">' + o.more[1] + '</a>' : '') + '</div>';
       dlg.showModal();
     }
-    dlg.addEventListener('click', function(e){ if (e.target === dlg || e.target.closest('.offer-x')) dlg.close(); });
+    dlg.addEventListener('click', function(e){ if (e.target === dlg || e.target.closest('.offer-x') || e.target.closest('.offer-more')) dlg.close(); });
     cards.forEach(function(card){
       card.tabIndex = 0;
       card.setAttribute('role', 'button');

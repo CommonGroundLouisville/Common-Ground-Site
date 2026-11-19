@@ -84,16 +84,63 @@
     paint();
   }
 
-  // "Take a look" badge follows the pointer over each space photo (mouse and trackpad only).
-  if (matchMedia('(hover: hover) and (pointer: fine)').matches){
-    document.querySelectorAll('.card .ph').forEach(function(ph){
-      var peek = ph.querySelector('.peek');
-      ph.addEventListener('pointermove', function(e){
-        var r = ph.getBoundingClientRect();
-        peek.style.transform = 'translate(' + (e.clientX - r.left) + 'px,' + (e.clientY - r.top) + 'px)';
-        peek.classList.add('live');
-      });
-      ph.addEventListener('pointerleave', function(){ peek.classList.remove('live'); });
+  // Photo cards open a membership card with "Add to cart" buttons.
+  // Checkout links live here so they can be swapped in one place once Nexudus / Zoho Bookings links arrive.
+  // url: null shows "Coming soon" until a link exists.
+  var NEXUDUS = 'https://commongroundky.nexudus.site/commongroundky/checkout/tariffs?type=99'; // generic page, swap for per-plan links
+  var TOUR = 'https://calendar.app.google.com/GQ8R7xq9K1n8rcDF7';
+  var BOOK = 'https://louisvillepodcast.studio/book-now'; // old site, swap before launch
+  var TIERS = {
+    'side-hustle':  { name: 'Side Hustle', price: '$299', per: '/mo', inc: '8 coworking days a month', url: NEXUDUS },
+    'daily-grind':  { name: 'Daily Grind', price: '$499', per: '/mo', inc: 'Unlimited 24/7, offices and meeting rooms included', url: NEXUDUS },
+    'teams':        { name: 'Strength in Numbers', price: 'Teams', per: '', inc: 'Shared access for your whole team', url: TOUR, cta: 'Talk to us' },
+    'day-pass':     { name: 'Day pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: null },
+    'meeting-room': { name: 'Meeting room', price: '$150', per: '/hour', inc: 'For non-members, by availability', url: null },
+    'event':        { name: 'Event inquiry', price: 'Ask', per: '', inc: 'Tell us your date and headcount', url: TOUR, cta: 'Ask us' },
+    'pod-standard': { name: 'Standard recording', price: '$249', per: '/hour', inc: 'Raw recording, no editing', url: BOOK },
+    'pod-basic':    { name: 'Basic Editing', price: '$299', per: '/hour', inc: 'Recording plus a clean edit', url: BOOK },
+    'pod-premium':  { name: 'Premium Editing', price: '$349', per: '/hour', inc: 'Edit plus a custom intro', url: BOOK }
+  };
+  var OFFERS = {
+    'open-coworking':  { lead: 'Grab any open seat. Every membership includes it.', tiers: ['side-hustle', 'daily-grind', 'day-pass'] },
+    'private-offices': { lead: 'Private offices at no extra cost on Daily Grind and up.', tiers: ['daily-grind', 'teams'] },
+    'meeting-rooms':   { lead: 'Free for Daily Grind members. Everyone else rents by the hour.', tiers: ['daily-grind', 'meeting-room'] },
+    'event-space':     { lead: 'Host a workshop, launch or meetup with us.', tiers: ['event', 'daily-grind'] },
+    'kitchen-lounge':  { lead: 'Coffee, kitchen and lounge seats for every member.', tiers: ['side-hustle', 'daily-grind', 'day-pass'] },
+    'podcast-studio':  { lead: 'Record in the building with our crew.', label: 'Studio pricing', tiers: ['pod-standard', 'pod-basic', 'pod-premium'], more: ['podcast.html#pricing', 'See all studio pricing →'] },
+    'networking':      { lead: 'Members come free and can bring guests.', tiers: ['side-hustle', 'daily-grind'] },
+    'workshops':       { lead: 'Trainings and talks with member pricing.', tiers: ['side-hustle', 'daily-grind'] },
+    'lounge-days':     { lead: 'Drop in for the day or make it a habit.', tiers: ['day-pass', 'side-hustle', 'daily-grind'] }
+  };
+  var cards = document.querySelectorAll('.card[data-offer]');
+  if (cards.length){
+    var dlg = document.createElement('dialog');
+    dlg.className = 'offer';
+    dlg.setAttribute('aria-labelledby', 'offer-title');
+    document.body.appendChild(dlg);
+    function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+    function open(card){
+      var o = OFFERS[card.dataset.offer]; if (!o) return;
+      var img = card.querySelector('img'), title = card.querySelector('h3').textContent;
+      var rows = o.tiers.map(function(k){
+        var t = TIERS[k];
+        var btn = t.url ? '<a class="btn primary" href="' + t.url + '">' + (t.cta || 'Add to cart') + ' <span class="ar">→</span></a>'
+                        : '<span class="btn ghost soon" aria-disabled="true">Coming soon</span>';
+        return '<li><div class="tn"><b>' + esc(t.name) + '</b><span>' + esc(t.inc) + '</span></div><div class="tp">' + esc(t.price) + '<small>' + t.per + '</small></div>' + btn + '</li>';
+      }).join('');
+      dlg.innerHTML = '<div class="offer-ph"><img src="' + img.getAttribute('src') + '" alt=""></div>' +
+        '<div class="offer-body"><button class="offer-x" type="button" aria-label="Close">×</button>' +
+        '<span class="label">' + (o.label || 'Memberships') + '</span><h3 id="offer-title">' + esc(title) + '</h3><p>' + esc(o.lead) + '</p>' +
+        '<ul class="offer-tiers">' + rows + '</ul>' + (o.more ? '<a class="offer-more" href="' + o.more[0] + '">' + o.more[1] + '</a>' : '') + '</div>';
+      dlg.showModal();
+    }
+    dlg.addEventListener('click', function(e){ if (e.target === dlg || e.target.closest('.offer-x')) dlg.close(); });
+    cards.forEach(function(card){
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-haspopup', 'dialog');
+      card.addEventListener('click', function(e){ if (!e.target.closest('a')) open(card); });
+      card.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(card); } });
     });
   }
 })();

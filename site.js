@@ -86,16 +86,17 @@
 
   // Photo cards open a membership card with "Add to cart" buttons.
   // Checkout links live here so they can be swapped in one place once Nexudus / Zoho Bookings links arrive.
-  // url: null shows "Coming soon" until a link exists.
+  // url: null shows a "Reach out to us" email button until a checkout link exists.
   var NEXUDUS = 'https://commongroundky.nexudus.site/commongroundky/checkout/tariffs?type=99'; // generic page, swap for per-plan links
   var TOUR = 'https://calendar.app.google.com/GQ8R7xq9K1n8rcDF7';
   var BOOK = 'https://louisvillepodcast.studio/book-now'; // old site, swap before launch
+  var EMAIL = { cg: 'info@ourcommonground.co', pod: 'team@louisvillepodcast.studio' };
   var TIERS = {
     'side-hustle':  { name: 'Side Hustle', price: '$299', per: '/mo', inc: '8 coworking days a month', url: NEXUDUS },
     'daily-grind':  { name: 'Daily Grind', price: '$499', per: '/mo', inc: 'Unlimited 24/7, offices and meeting rooms included', url: NEXUDUS },
     'teams':        { name: 'Strength in Numbers', price: 'Teams', per: '', inc: 'Shared access for your whole team', url: TOUR, cta: 'Talk to us' },
-    'day-pass':     { name: 'Day pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: null },
-    'meeting-room': { name: 'Meeting room', price: '$150', per: '/hour', inc: 'For non-members, by availability', url: null },
+    'day-pass':     { name: 'Day pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: null, ask: 'cg' },
+    'meeting-room': { name: 'Meeting room', price: '$150', per: '/hour', inc: 'For non-members, by availability', url: null, ask: 'cg' },
     'event':        { name: 'Event inquiry', price: 'Ask', per: '', inc: 'Tell us your date and headcount', url: TOUR, cta: 'Ask us' },
     'pod-standard': { name: 'Standard recording', price: '$249', per: '/hour', inc: 'Raw recording, no editing', url: BOOK },
     'pod-basic':    { name: 'Basic Editing', price: '$299', per: '/hour', inc: 'Recording plus a clean edit', url: BOOK },
@@ -125,7 +126,7 @@
       var rows = o.tiers.map(function(k){
         var t = TIERS[k];
         var btn = t.url ? '<a class="btn primary" href="' + t.url + '">' + (t.cta || 'Add to cart') + ' <span class="ar">→</span></a>'
-                        : '<span class="btn ghost soon" aria-disabled="true">Coming soon</span>';
+                        : '<a class="btn ghost" href="mailto:' + EMAIL[t.ask || 'cg'] + '?subject=' + encodeURIComponent(t.name) + '">Reach out to us</a>';
         return '<li><div class="tn"><b>' + esc(t.name) + '</b><span>' + esc(t.inc) + '</span></div><div class="tp">' + esc(t.price) + '<small>' + t.per + '</small></div>' + btn + '</li>';
       }).join('');
       dlg.innerHTML = '<div class="offer-ph"><img src="' + img.getAttribute('src') + '" alt=""></div>' +

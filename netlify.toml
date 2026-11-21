@@ -2,3 +2,446 @@
 [build]
   publish = "."
   command = ""
+
+# Launch redirects. ourcommonground.co is the main address; the other domains are
+# Netlify domain aliases and send visitors to the matching page. Old Squarespace
+# paths go to their closest new page. Host rules must stay above the path-only rules.
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/memberships"
+  to = "https://ourcommonground.co/podcast.html#pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/packages"
+  to = "https://ourcommonground.co/podcast.html#pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/book-now"
+  to = "https://ourcommonground.co/podcast.html#pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/services"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/locations"
+  to = "https://ourcommonground.co/podcast.html#locations"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/about"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/*"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/memberships"
+  to = "https://ourcommonground.co/podcast.html#pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/packages"
+  to = "https://ourcommonground.co/podcast.html#pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/book-now"
+  to = "https://ourcommonground.co/podcast.html#pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/services"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/locations"
+  to = "https://ourcommonground.co/podcast.html#locations"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/about"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/*"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/"
+  to = "https://ourcommonground.co/cowork.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/the-space-1"
+  to = "https://ourcommonground.co/cowork.html#spaces"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/the-space"
+  to = "https://ourcommonground.co/cowork.html#spaces"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/memberships"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/membership"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/virtual-office"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/the-podcast-studio"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/about"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/our-story"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/faq"
+  to = "https://ourcommonground.co/cowork.html#visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/contactus"
+  to = "https://ourcommonground.co/cowork.html#visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://commongroundlou.com/*"
+  to = "https://ourcommonground.co/cowork.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/"
+  to = "https://ourcommonground.co/cowork.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/the-space-1"
+  to = "https://ourcommonground.co/cowork.html#spaces"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/the-space"
+  to = "https://ourcommonground.co/cowork.html#spaces"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/memberships"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/membership"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/virtual-office"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/the-podcast-studio"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/about"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/our-story"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/faq"
+  to = "https://ourcommonground.co/cowork.html#visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/contactus"
+  to = "https://ourcommonground.co/cowork.html#visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.commongroundlou.com/*"
+  to = "https://ourcommonground.co/cowork.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/"
+  to = "https://ourcommonground.co/cowork.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/the-space-1"
+  to = "https://ourcommonground.co/cowork.html#spaces"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/the-space"
+  to = "https://ourcommonground.co/cowork.html#spaces"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/memberships"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/membership"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/virtual-office"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/the-podcast-studio"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/about"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/our-story"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/faq"
+  to = "https://ourcommonground.co/cowork.html#visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/contactus"
+  to = "https://ourcommonground.co/cowork.html#visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillecoworkingspace.com/*"
+  to = "https://ourcommonground.co/cowork.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/"
+  to = "https://ourcommonground.co/cowork.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/the-space-1"
+  to = "https://ourcommonground.co/cowork.html#spaces"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/the-space"
+  to = "https://ourcommonground.co/cowork.html#spaces"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/memberships"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/membership"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/virtual-office"
+  to = "https://ourcommonground.co/memberships.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/the-podcast-studio"
+  to = "https://ourcommonground.co/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/about"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/our-story"
+  to = "https://ourcommonground.co/community.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/faq"
+  to = "https://ourcommonground.co/cowork.html#visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/contactus"
+  to = "https://ourcommonground.co/cowork.html#visit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillecoworkingspace.com/*"
+  to = "https://ourcommonground.co/cowork.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-space-1"
+  to = "/cowork.html#spaces"
+  status = 301
+
+[[redirects]]
+  from = "/the-space"
+  to = "/cowork.html#spaces"
+  status = 301
+
+[[redirects]]
+  from = "/membership"
+  to = "/memberships.html"
+  status = 301
+
+[[redirects]]
+  from = "/memberships"
+  to = "/memberships.html"
+  status = 301
+
+[[redirects]]
+  from = "/virtual-office"
+  to = "/memberships.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-podcast-studio"
+  to = "/podcast.html"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/community.html"
+  status = 301
+
+[[redirects]]
+  from = "/our-story"
+  to = "/community.html"
+  status = 301
+
+[[redirects]]
+  from = "/faq"
+  to = "/cowork.html#visit"
+  status = 301
+
+[[redirects]]
+  from = "/contactus"
+  to = "/cowork.html#visit"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/"
+  status = 301

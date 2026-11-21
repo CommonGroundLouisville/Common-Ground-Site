@@ -10,5 +10,5 @@ Static site for Common Ground (coworking), Louisville Podcast Studio by Common G
 
 ## Notes
 
-- Every page carries `<meta name="robots" content="noindex">` while the site is in review. Remove it at launch.
+- Launch: ourcommonground.co is the main domain; netlify.toml redirects the other domains and old Squarespace paths.
 - `tools/build_site.py` is the generator the first version came from; the HTML files are now the source of truth and can be edited directly.

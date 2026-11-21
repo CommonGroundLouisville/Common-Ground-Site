@@ -6,100 +6,138 @@
 # Launch redirects. ourcommonground.co is the main address; the other domains are
 # Netlify domain aliases and send visitors to the matching page. Old Squarespace
 # paths go to their closest new page. Host rules must stay above the path-only rules.
+# For now louisvillepodcast.studio serves the site itself and opens on the podcast page.
+# Once ourcommonground.co points here, change these to send visitors to https://ourcommonground.co/podcast.html.
 
 [[redirects]]
   from = "https://louisvillepodcast.studio/"
-  to = "https://ourcommonground.co/podcast.html"
+  to = "/podcast.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://louisvillepodcast.studio/memberships"
-  to = "https://ourcommonground.co/podcast.html#pricing"
+  to = "/podcast.html#pricing"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://louisvillepodcast.studio/packages"
-  to = "https://ourcommonground.co/podcast.html#pricing"
+  to = "/podcast.html#pricing"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://louisvillepodcast.studio/book-now"
-  to = "https://ourcommonground.co/podcast.html#pricing"
+  to = "/podcast.html#pricing"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://louisvillepodcast.studio/services"
-  to = "https://ourcommonground.co/podcast.html"
+  to = "/podcast.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://louisvillepodcast.studio/locations"
-  to = "https://ourcommonground.co/podcast.html#locations"
+  to = "/podcast.html#locations"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://louisvillepodcast.studio/about"
-  to = "https://ourcommonground.co/community.html"
+  to = "/community.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://louisvillepodcast.studio/*"
-  to = "https://ourcommonground.co/podcast.html"
+  from = "https://louisvillepodcast.studio/blog"
+  to = "/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/blog/*"
+  to = "/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/cart"
+  to = "/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://louisvillepodcast.studio/privacy-policy"
+  to = "/podcast.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.louisvillepodcast.studio/"
-  to = "https://ourcommonground.co/podcast.html"
+  to = "/podcast.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.louisvillepodcast.studio/memberships"
-  to = "https://ourcommonground.co/podcast.html#pricing"
+  to = "/podcast.html#pricing"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.louisvillepodcast.studio/packages"
-  to = "https://ourcommonground.co/podcast.html#pricing"
+  to = "/podcast.html#pricing"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.louisvillepodcast.studio/book-now"
-  to = "https://ourcommonground.co/podcast.html#pricing"
+  to = "/podcast.html#pricing"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.louisvillepodcast.studio/services"
-  to = "https://ourcommonground.co/podcast.html"
+  to = "/podcast.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.louisvillepodcast.studio/locations"
-  to = "https://ourcommonground.co/podcast.html#locations"
+  to = "/podcast.html#locations"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.louisvillepodcast.studio/about"
-  to = "https://ourcommonground.co/community.html"
+  to = "/community.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://www.louisvillepodcast.studio/*"
-  to = "https://ourcommonground.co/podcast.html"
+  from = "https://www.louisvillepodcast.studio/blog"
+  to = "/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/blog/*"
+  to = "/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/cart"
+  to = "/podcast.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.louisvillepodcast.studio/privacy-policy"
+  to = "/podcast.html"
   status = 301
   force = true
 

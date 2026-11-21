@@ -89,20 +89,20 @@
   // url: null shows a "Reach out to us" email button until a checkout link exists.
   var STORE = 'https://commongroundky.nexudus.site/en/store?product_id='; // Nexudus store products
   var TOUR = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3lrOQ2x_zp0duYf03Wbk9lnb35sqgY8bSXdhOOogKYwSFaO0CLp2aWV935guRgVqcSIPBCiN97';
-  var BOOK = 'https://louisvillepodcast.studio/book-now'; // old site, swap before launch
+  var BOOK = 'mailto:info@ourcommonground.co?subject=Podcast%20recording%20session'; // podcast sessions are set up by email for now
   var EMAIL = { cg: 'info@ourcommonground.co', pod: 'team@louisvillepodcast.studio' };
   var TIERS = {
-    'side-hustle':  { name: 'Side Hustle', price: '$299', per: '/mo', inc: '8 coworking days a month', url: STORE + '1415528030' },
-    'daily-grind':  { name: 'Daily Grind', price: '$499', per: '/mo', inc: 'Unlimited 24/7, offices and meeting rooms included', url: STORE + '1415528029' },
-    'teams':        { name: 'Strength in Numbers', price: 'Teams', per: '', inc: 'Shared access for your whole team', url: 'mailto:info@ourcommonground.co?subject=Team%20membership', cta: 'Talk to us' },
+    'side-hustle':  { name: 'Side Hustle', price: '$299', per: '/mo', inc: '8 coworking days a month', url: 'https://commongroundky.nexudus.site/en/signup/priceplan/bf40c70f-5dab-4fa0-ae33-6823c86f95a2' },
+    'daily-grind':  { name: 'Daily Grind', price: '$499', per: '/mo', inc: 'Unlimited 24/7, offices and meeting rooms included', url: 'https://commongroundky.nexudus.site/en/signup/priceplan/87b07f2c-7eec-41b6-8838-568c2bf1192c' },
+    'teams':        { name: 'Strength in Numbers', price: 'Teams', per: '', inc: 'Up to 3 named team members, unlimited access', url: 'https://commongroundky.nexudus.site/en/signup/priceplan/a02e0966-2022-416d-b9e9-86e853c2ea15', cta: 'Sign up' },
     'day-pass':     { name: 'All Day Pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: STORE + '1415231042', cta: 'Buy a pass' },
     'day-pack':     { name: '5 Day Pass Pack', price: '$175', per: '/5 days', inc: 'Five full days, use them when you like', url: STORE + '1415409868', cta: 'Buy a pack' },
     'room-small':   { name: 'Small Conference Room', price: '$50', per: '/hour', inc: 'For non-members, by availability', url: STORE + '1415276742', cta: 'Book' },
     'room-large':   { name: 'Large Conference Room', price: '$75', per: '/hour', inc: 'For non-members, by availability', url: STORE + '1415276647', cta: 'Book' },
     'event':        { name: 'Event inquiry', price: 'Ask', per: '', inc: 'Tell us your date and headcount', url: 'mailto:info@ourcommonground.co?subject=Event%20inquiry', cta: 'Ask us' },
-    'pod-standard': { name: 'Standard recording', price: '$249', per: '/hour', inc: 'Raw recording, no editing', url: BOOK },
-    'pod-basic':    { name: 'Basic Editing', price: '$299', per: '/hour', inc: 'Recording plus a clean edit', url: BOOK },
-    'pod-premium':  { name: 'Premium Editing', price: '$349', per: '/hour', inc: 'Edit plus a custom intro', url: BOOK }
+    'pod-standard': { name: 'Standard recording', price: '$249', per: '/hour', inc: 'Raw recording, no editing', url: BOOK, cta: "Let's get you set up!" },
+    'pod-basic':    { name: 'Basic Editing', price: '$299', per: '/hour', inc: 'Recording plus a clean edit', url: BOOK, cta: "Let's get you set up!" },
+    'pod-premium':  { name: 'Premium Editing', price: '$349', per: '/hour', inc: 'Edit plus a custom intro', url: BOOK, cta: "Let's get you set up!" }
   };
   var OFFERS = {
     'open-coworking':  { lead: 'Grab any open seat. Every membership includes it.', tiers: ['side-hustle', 'daily-grind', 'day-pass', 'day-pack'] },

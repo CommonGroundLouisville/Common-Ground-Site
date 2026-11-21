@@ -95,7 +95,7 @@
     'side-hustle':  { name: 'Side Hustle', price: '$299', per: '/mo', inc: '8 coworking days a month', url: NEXUDUS },
     'daily-grind':  { name: 'Daily Grind', price: '$499', per: '/mo', inc: 'Unlimited 24/7, offices and meeting rooms included', url: NEXUDUS },
     'teams':        { name: 'Strength in Numbers', price: 'Teams', per: '', inc: 'Shared access for your whole team', url: 'mailto:info@ourcommonground.co?subject=Team%20membership', cta: 'Talk to us' },
-    'day-pass':     { name: 'Day pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: null, ask: 'cg' },
+    'day-pass':     { name: 'All Day Pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: 'https://commongroundky.nexudus.site/en/store?product_id=1415231042', cta: 'Buy a pass' },
     'meeting-room': { name: 'Meeting room', price: '$150', per: '/hour', inc: 'For non-members, by availability', url: null, ask: 'cg' },
     'event':        { name: 'Event inquiry', price: 'Ask', per: '', inc: 'Tell us your date and headcount', url: 'mailto:info@ourcommonground.co?subject=Event%20inquiry', cta: 'Ask us' },
     'pod-standard': { name: 'Standard recording', price: '$249', per: '/hour', inc: 'Raw recording, no editing', url: BOOK },

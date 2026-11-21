@@ -88,7 +88,7 @@
   // Checkout links live here so they can be swapped in one place once Nexudus / Zoho Bookings links arrive.
   // url: null shows a "Reach out to us" email button until a checkout link exists.
   var NEXUDUS = 'https://commongroundky.nexudus.site/commongroundky/checkout/tariffs?type=99'; // generic page, swap for per-plan links
-  var TOUR = 'https://calendar.app.google.com/GQ8R7xq9K1n8rcDF7';
+  var TOUR = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3lrOQ2x_zp0duYf03Wbk9lnb35sqgY8bSXdhOOogKYwSFaO0CLp2aWV935guRgVqcSIPBCiN97';
   var BOOK = 'https://louisvillepodcast.studio/book-now'; // old site, swap before launch
   var EMAIL = { cg: 'info@ourcommonground.co', pod: 'team@louisvillepodcast.studio' };
   var TIERS = {

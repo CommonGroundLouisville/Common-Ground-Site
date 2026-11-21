@@ -87,15 +87,16 @@
   // Photo cards open a membership card with "Add to cart" buttons.
   // Checkout links live here so they can be swapped in one place once Nexudus / Zoho Bookings links arrive.
   // url: null shows a "Reach out to us" email button until a checkout link exists.
-  var NEXUDUS = 'https://commongroundky.nexudus.site/commongroundky/checkout/tariffs?type=99'; // generic page, swap for per-plan links
+  var STORE = 'https://commongroundky.nexudus.site/en/store?product_id='; // Nexudus store products
   var TOUR = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3lrOQ2x_zp0duYf03Wbk9lnb35sqgY8bSXdhOOogKYwSFaO0CLp2aWV935guRgVqcSIPBCiN97';
   var BOOK = 'https://louisvillepodcast.studio/book-now'; // old site, swap before launch
   var EMAIL = { cg: 'info@ourcommonground.co', pod: 'team@louisvillepodcast.studio' };
   var TIERS = {
-    'side-hustle':  { name: 'Side Hustle', price: '$299', per: '/mo', inc: '8 coworking days a month', url: NEXUDUS },
-    'daily-grind':  { name: 'Daily Grind', price: '$499', per: '/mo', inc: 'Unlimited 24/7, offices and meeting rooms included', url: NEXUDUS },
+    'side-hustle':  { name: 'Side Hustle', price: '$299', per: '/mo', inc: '8 coworking days a month', url: STORE + '1415528030' },
+    'daily-grind':  { name: 'Daily Grind', price: '$499', per: '/mo', inc: 'Unlimited 24/7, offices and meeting rooms included', url: STORE + '1415528029' },
     'teams':        { name: 'Strength in Numbers', price: 'Teams', per: '', inc: 'Shared access for your whole team', url: 'mailto:info@ourcommonground.co?subject=Team%20membership', cta: 'Talk to us' },
-    'day-pass':     { name: 'All Day Pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: 'https://commongroundky.nexudus.site/en/store?product_id=1415231042', cta: 'Buy a pass' },
+    'day-pass':     { name: 'All Day Pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: STORE + '1415231042', cta: 'Buy a pass' },
+    'day-pack':     { name: '5 Day Pass Pack', price: '5', per: ' days', inc: 'Five full days, use them when you like', url: STORE + '1415409868', cta: 'Buy a pack' },
     'meeting-room': { name: 'Meeting room', price: '$150', per: '/hour', inc: 'For non-members, by availability', url: null, ask: 'cg' },
     'event':        { name: 'Event inquiry', price: 'Ask', per: '', inc: 'Tell us your date and headcount', url: 'mailto:info@ourcommonground.co?subject=Event%20inquiry', cta: 'Ask us' },
     'pod-standard': { name: 'Standard recording', price: '$249', per: '/hour', inc: 'Raw recording, no editing', url: BOOK },
@@ -103,18 +104,18 @@
     'pod-premium':  { name: 'Premium Editing', price: '$349', per: '/hour', inc: 'Edit plus a custom intro', url: BOOK }
   };
   var OFFERS = {
-    'open-coworking':  { lead: 'Grab any open seat. Every membership includes it.', tiers: ['side-hustle', 'daily-grind', 'day-pass'] },
+    'open-coworking':  { lead: 'Grab any open seat. Every membership includes it.', tiers: ['side-hustle', 'daily-grind', 'day-pass', 'day-pack'] },
     'private-offices': { lead: 'Private offices at no extra cost on Daily Grind and up.', tiers: ['daily-grind', 'teams'] },
     'meeting-rooms':   { lead: 'Free for Daily Grind members. Everyone else rents by the hour.', tiers: ['daily-grind', 'meeting-room'] },
     'event-space':     { lead: 'Host a workshop, launch or meetup with us.', tiers: ['event', 'daily-grind'] },
-    'kitchen-lounge':  { lead: 'Coffee, kitchen and lounge seats for every member.', tiers: ['side-hustle', 'daily-grind', 'day-pass'] },
+    'kitchen-lounge':  { lead: 'Coffee, kitchen and lounge seats for every member.', tiers: ['side-hustle', 'daily-grind', 'day-pass', 'day-pack'] },
     'podcast-studio':  { lead: 'Record in the building with our crew.', label: 'Studio pricing', tiers: ['pod-standard', 'pod-basic', 'pod-premium'], more: ['podcast.html#pricing', 'See all studio pricing →'] },
     'pod-record':      { label: 'Studio pricing', lead: 'Video and audio in a fully set studio.', tiers: ['pod-standard', 'pod-basic', 'pod-premium'], more: ['#pricing', 'See all studio pricing →'] },
     'pod-film':        { label: 'Studio pricing', lead: 'Multiple camera angles, lit and ready.', tiers: ['pod-standard', 'pod-basic', 'pod-premium'], more: ['#pricing', 'See all studio pricing →'] },
     'pod-edit':        { label: 'Studio pricing', lead: 'Full episodes or social clips, edited for you.', tiers: ['pod-basic', 'pod-premium'], more: ['#pricing', 'See all studio pricing →'] },
     'networking':      { lead: 'Members come free and can bring guests.', tiers: ['side-hustle', 'daily-grind'] },
     'workshops':       { lead: 'Trainings and talks with member pricing.', tiers: ['side-hustle', 'daily-grind'] },
-    'lounge-days':     { lead: 'Drop in for the day or make it a habit.', tiers: ['day-pass', 'side-hustle', 'daily-grind'] }
+    'lounge-days':     { lead: 'Drop in for the day or make it a habit.', tiers: ['day-pass', 'day-pack', 'side-hustle', 'daily-grind'] }
   };
   var cards = document.querySelectorAll('.card[data-offer]');
   if (cards.length){

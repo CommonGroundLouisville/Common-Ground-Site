@@ -1,6 +1,6 @@
 # Common Ground website
 
-Static site for Common Ground (coworking), Louisville Podcast Studio by Common Ground, and the Common Ground community. Hosted on Netlify, which deploys every push to `main`.
+Static site for Common Ground (coworking), the Common Ground Podcast Studio, and the Common Ground community. Hosted on Netlify, which deploys every push to `main`.
 
 ## Pages
 

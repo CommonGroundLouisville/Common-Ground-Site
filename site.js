@@ -96,7 +96,7 @@
     'daily-grind':  { name: 'Daily Grind', price: '$499', per: '/mo', inc: 'Unlimited 24/7, offices and meeting rooms included', url: 'https://commongroundky.nexudus.site/en/signup/priceplan/87b07f2c-7eec-41b6-8838-568c2bf1192c' },
     'teams':        { name: 'Strength in Numbers', price: 'Teams', per: '', inc: 'Up to 3 named team members, unlimited access', url: 'https://commongroundky.nexudus.site/en/signup/priceplan/a02e0966-2022-416d-b9e9-86e853c2ea15', cta: 'Sign up' },
     'day-pass':     { name: 'All Day Pass', price: '$49', per: '/day', inc: 'One full day of coworking', url: STORE + '1415231042', cta: 'Buy a pass' },
-    'day-pack':     { name: '5 Day Pass Pack', price: '$175', per: '/5 days', inc: 'Five full days, use them when you like', url: STORE + '1415409868', cta: 'Buy a pack' },
+    'day-pack':     { name: '4 Day Pass Pack', price: '$160', per: '/4 days', inc: 'Four full days, use them when you like', url: STORE + '1415409868', cta: 'Buy a pack' },
     'room-small':   { name: 'Small Conference Room', price: '$50', per: '/hour', inc: 'For non-members, by availability', url: STORE + '1415276742', cta: 'Book' },
     'room-large':   { name: 'Large Conference Room', price: '$75', per: '/hour', inc: 'For non-members, by availability', url: STORE + '1415276647', cta: 'Book' },
     'event':        { name: 'Event inquiry', price: 'Ask', per: '', inc: 'Tell us your date and headcount', url: 'mailto:info@ourcommonground.co?subject=Event%20inquiry', cta: 'Ask us' },
